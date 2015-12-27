@@ -1,0 +1,23 @@
+api.joshwillik.com-node:
+  build: .
+  restart: always
+  container_name: api.joshwillik.com-node
+  ports:
+    - "127.0.0.1::80"
+  links:
+    - "api.joshwillik.com-redis:redis"
+  environment:
+    - REDIS_HOST=redis
+    - REDIS_PORT=6379
+    - VIRTUAL_HOST=api.joshwillik.com
+    - CERTIFICATE_PATH=/etc/nginx/ssl/joshwillik.com
+  env_file:
+    - secrets.env
+
+api.joshwillik.com-redis:
+  image: redis
+  restart: always
+  command: "redis-server --appendonly yes"
+  container_name: api.joshwillik.com-redis
+  volumes:
+    - "/srv/api.joshwillik.com-redis:/data"
