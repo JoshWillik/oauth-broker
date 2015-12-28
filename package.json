@@ -5,6 +5,7 @@
     "start": "node standalone.js"
   },
   "dependencies": {
+    "co": "^4.6.0",
     "http-status-codes": "^1.0.5",
     "jj-log": "^1.2.0",
     "koa": "^1.1.2",
