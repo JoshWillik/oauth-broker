@@ -6,6 +6,11 @@
 * Twitter
 
 ## Docker Usage
+
+This project is subject to change.
+If you want to use it in its current state, please use `oauth-broker:1`.
+`oauth-broker:latest` will be broken when I refactor this project.
+
 ```shell
 docker run -d \
   --name oauth-broker \
