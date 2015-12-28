@@ -17,6 +17,7 @@ docker run -d \
   -p 8888:80 \
   \
   -e BASE_URL=https://my-code-project.com \
+  -e SESSION_KEYS="session key 1,something secret,fnthont32nt4htnh,session key 4" \
   \
   -e SPOTIFY_CLIENT_ID=<token> \
   -e SPOTIFY_CLIENT_SECRET=<secret> \
