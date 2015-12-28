@@ -9,4 +9,7 @@ oauthBroker(settings).then(app => {
   app.listen(HTTP_PORT, () => {
     app.logger.info('Listening on :80')
   })
+}).catch(err => {
+  console.log(err)
+  console.log(err.stack)
 })
